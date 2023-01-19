@@ -1,6 +1,6 @@
-name: 'SimpleCov+ Action'
-description: 'Enabling SimpleCov support for Github Actions'
-author: 'Josh Frankel'
+name: 'SimpleCov+ Action (Backwards Compatible)'
+description: 'Enabling SimpleCov support for Github Actions (Backwards Compatible)'
+author: 'Forked from: Josh Frankel repo'
 inputs:
   github_token:
     description: 'Github token for create checks'
