@@ -9,7 +9,7 @@ module Adapters
       @results = JSON.parse(File.read(coverage_path))
       @minimum_coverage = Float(minimum_coverage)
 
-      raise "#{coverage_path} does not contain `line` key" unless !result.nil? && result.key?("line")
+      raise "#{coverage_path} empty or not found" if result.nil?
     end
 
     # Determine pass/fail response for SimpleCov
@@ -23,7 +23,7 @@ module Adapters
     #
     # @return [Float]
     def covered_percent
-      result["line"]
+      result["line"] || result["covered_percent"]
     end
 
     private
